@@ -30,6 +30,9 @@ color: black;
   margin-right: -10px;
   height: 100vh;
 }
+#skl{
+  font-size: 20px;
+}
 body{
 margin:0;
 font-family:'Raleway',san-serif;
