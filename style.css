@@ -27,8 +27,7 @@ color: black;
 }
 .right-side{
   float: right;
-  margin-right: -150px;
-  margin-left: 300px;
+  margin-right: -50px;
   height: 100vh;
 }
 body{
