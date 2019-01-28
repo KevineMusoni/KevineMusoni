@@ -1,28 +1,15 @@
-$(document).ready(function() {
-  
-  var scrollLink = $('.scroll');
-  
-  // Smooth scrolling
-  scrollLink.click(function(e) {
-    e.preventDefault();
-    $('body,html').animate({
-      scrollTop: $(this.hash).offset().top
-    }, 1000 );
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+$(document).ready(function () {
+  $('.progress-value > span').each(function () {
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).text()
+    }, {
+        duration: 3500,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        }
+      });
   });
-  
-  $(window).scroll(function() {
-    var scrollbarLocation = $(this).scrollTop();
-    
-    scrollLink.each(function() {
-      
-      var sectionOffset = $(this.hash).offset().top - 20;
-      
-      if ( sectionOffset <= scrollbarLocation ) {
-        $(this).parent().addClass('active');
-        $(this).parent().siblings().removeClass('active');
-      }
-    })
-    
-  })
-  
-})
+});
