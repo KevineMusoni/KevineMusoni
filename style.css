@@ -144,6 +144,7 @@ h3{
   width: 900px;
 
 }
+/* slides */
 @keyframes slide{
  25%{
   background-image: url("images/image4.jpg");
